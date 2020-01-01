@@ -1,0 +1,32 @@
+language: cpp
+before_script:
+- sudo apt-get install libboost-test-dev -y
+- sudo apt-get install libgtest-dev
+- sudo apt-get install cmake
+- sudo apt-get install doxygen
+- sudo apt-get install graphviz
+- cd /usr/src/gtest
+- sudo cmake .
+- sudo make
+- sudo cp *.a /usr/lib
+- echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
+- sudo apt-get update -qq
+script:
+- cd $TRAVIS_BUILD_DIR
+- cmake .
+- cmake --build .
+- cmake --build . --target test
+- cmake --build . --target package
+- doxygen Doxyfile
+deploy:
+- provider: script
+  skip_cleanup: true
+  script:
+  - curl -T bulk-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -utibxq:$BINTRAY_API_KEY "https://api.bintray.com/content/tibxq/otus_cpp/otus_cpp_h7/$TRAVIS_BUILD_NUMBER/bulk-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
+- provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  local_dir: html
+  on:
+    branch: master
