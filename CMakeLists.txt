@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.2)
 
-project(editor VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
-#project(editor VERSION 0.0.1)
+project(bulk VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
+#project(bulk VERSION 0.0.1)
 
 find_package(GTest REQUIRED)
 find_package(Threads REQUIRED)
