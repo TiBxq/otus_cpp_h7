@@ -40,7 +40,7 @@ public:
 
 int main(int, char const* argv[])
 {
-    int N = std::stoi(argv[1]);
+    std::size_t N = std::stoi(argv[1]);
 
     std::cout << N << std::endl;
 
@@ -56,6 +56,11 @@ int main(int, char const* argv[])
         {
             mgr.Execute();
         }
+    }
+
+    if (!mgr.m_cmdList.empty())
+    {
+        mgr.Execute();
     }
 
     return 0;
