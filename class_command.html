@@ -85,12 +85,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_command-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Command Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_commands_8h_source.html">Commands.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Command:</div>
 <div class="dyncontent">
@@ -112,13 +113,8 @@ Collaboration diagram for Command:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0e17cd000694f21a8e86323d58bed24a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command.html#a0e17cd000694f21a8e86323d58bed24a">Command</a> (std::string cmd)</td></tr>
 <tr class="separator:a0e17cd000694f21a8e86323d58bed24a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac03266b90862d3e2a84223afdf9c46e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command.html#aac03266b90862d3e2a84223afdf9c46e">Execute</a> () override</td></tr>
-<tr class="separator:aac03266b90862d3e2a84223afdf9c46e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:afa0c6ad2e8bf1ee6d11727f0115e6813"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command.html#afa0c6ad2e8bf1ee6d11727f0115e6813">m_cmd</a></td></tr>
-<tr class="separator:afa0c6ad2e8bf1ee6d11727f0115e6813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40da37783f8c3e8d05b1b2a6ead20319"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command.html#a40da37783f8c3e8d05b1b2a6ead20319">Execute</a> (std::ostream &amp;os) override</td></tr>
+<tr class="separator:a40da37783f8c3e8d05b1b2a6ead20319"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0e17cd000694f21a8e86323d58bed24a"></a>
@@ -146,7 +142,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aac03266b90862d3e2a84223afdf9c46e"></a>
+<a class="anchor" id="a40da37783f8c3e8d05b1b2a6ead20319"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -156,7 +152,8 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void Command::Execute </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -167,25 +164,12 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_command_base.html#afc5dc5d6095b32d1fea10a8e8af2cf25">CommandBase</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="afa0c6ad2e8bf1ee6d11727f0115e6813"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string Command::m_cmd</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Implements <a class="el" href="class_command_base.html#a8714db170886e669a72219c7cf0de3ba">CommandBase</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="bulk_8cpp.html">bulk.cpp</a></li>
+<li><a class="el" href="_commands_8h_source.html">Commands.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

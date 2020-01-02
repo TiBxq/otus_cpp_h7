@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['n',['N',['../class_command_mgr.html#a777dcc8c99af7d8a7084857fa1ff4a0b',1,'CommandMgr']]]
+  ['gettype',['GetType',['../class_command_package.html#a93fc18bbc9aa1c30516772ca13039a47',1,'CommandPackage::GetType()'],['../class_static_command_package.html#addf43efa85be145485067e165ca4e9a5',1,'StaticCommandPackage::GetType()'],['../class_dynamic_command_package.html#a9f21e67a9ed2262b0f8f6d659ef51cc8',1,'DynamicCommandPackage::GetType()']]]
 ];

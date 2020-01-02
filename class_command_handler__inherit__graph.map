@@ -1,0 +1,4 @@
+<map id="CommandHandler" name="CommandHandler">
+<area shape="rect" id="node2" href="$class_console_command_handler.html" title="ConsoleCommandHandler" alt="" coords="5,80,196,107"/>
+<area shape="rect" id="node3" href="$class_file_command_handler.html" title="FileCommandHandler" alt="" coords="220,80,379,107"/>
+</map>

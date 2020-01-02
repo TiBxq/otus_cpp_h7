@@ -91,6 +91,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">CommandMgr Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_command_mgr_8h_source.html">CommandMgr.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for CommandMgr:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_command_mgr__coll__graph.png" border="0" usemap="#_command_mgr_coll__map" alt="Collaboration graph"/></div>
+<map name="_command_mgr_coll__map" id="_command_mgr_coll__map">
+<area shape="rect" id="node2" href="class_command_package.html" title="CommandPackage" alt="" coords="5,95,148,121"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -98,10 +108,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0d3968316177972d096d752e8607b68b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa61ad0a2dd4adf633434ed088412cec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_mgr.html#afa61ad0a2dd4adf633434ed088412cec">Add</a> (<a class="el" href="class_command_base.html">CommandBase</a> *cmd)</td></tr>
 <tr class="separator:afa61ad0a2dd4adf633434ed088412cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62eef3d199e96ed223232df59b29a72d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_mgr.html#a62eef3d199e96ed223232df59b29a72d">Inc</a> ()</td></tr>
-<tr class="separator:a62eef3d199e96ed223232df59b29a72d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab59eca67d45fe74e9c5753e1fcde5aa8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_mgr.html#ab59eca67d45fe74e9c5753e1fcde5aa8">Execute</a> ()</td></tr>
-<tr class="separator:ab59eca67d45fe74e9c5753e1fcde5aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfed27d80d3f9650343cc9b7db2020c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_mgr.html#acfed27d80d3f9650343cc9b7db2020c9">OpenBlock</a> ()</td></tr>
+<tr class="separator:acfed27d80d3f9650343cc9b7db2020c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dc8e0869302d39b38802d40177ffdea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_mgr.html#a4dc8e0869302d39b38802d40177ffdea">CloseBlock</a> ()</td></tr>
+<tr class="separator:a4dc8e0869302d39b38802d40177ffdea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade2efd944c6a552cbf28fb2979d6a89a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_mgr.html#ade2efd944c6a552cbf28fb2979d6a89a">OnCompleted</a> ()</td></tr>
+<tr class="separator:ade2efd944c6a552cbf28fb2979d6a89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -111,6 +123,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a777dcc8c99af7d8a7084857fa1ff4a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e4ebf21ab0a7323c9ad831aec2b6b2d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_mgr.html#a0e4ebf21ab0a7323c9ad831aec2b6b2d">counter</a> = 0</td></tr>
 <tr class="separator:a0e4ebf21ab0a7323c9ad831aec2b6b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38968eb5b68e56d34d9dc3536f0ea3c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_command_package.html">CommandPackage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_mgr.html#a38968eb5b68e56d34d9dc3536f0ea3c2">m_pkg</a> = nullptr</td></tr>
+<tr class="separator:a38968eb5b68e56d34d9dc3536f0ea3c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0d3968316177972d096d752e8607b68b"></a>
@@ -162,7 +176,7 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab59eca67d45fe74e9c5753e1fcde5aa8"></a>
+<a class="anchor" id="a4dc8e0869302d39b38802d40177ffdea"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -170,7 +184,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void CommandMgr::Execute </td>
+          <td class="memname">void CommandMgr::CloseBlock </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -185,7 +199,7 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a62eef3d199e96ed223232df59b29a72d"></a>
+<a class="anchor" id="ade2efd944c6a552cbf28fb2979d6a89a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -193,7 +207,30 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void CommandMgr::Inc </td>
+          <td class="memname">void CommandMgr::OnCompleted </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acfed27d80d3f9650343cc9b7db2020c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CommandMgr::OpenBlock </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -233,6 +270,18 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a38968eb5b68e56d34d9dc3536f0ea3c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_command_package.html">CommandPackage</a>* CommandMgr::m_pkg = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a777dcc8c99af7d8a7084857fa1ff4a0b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -246,7 +295,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="bulk_8cpp.html">bulk.cpp</a></li>
+<li><a class="el" href="_command_mgr_8h_source.html">CommandMgr.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
