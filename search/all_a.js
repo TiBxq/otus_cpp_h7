@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['otus_5fcpp_5fh7',['otus_cpp_h7',['../md_README.html',1,'']]],
-  ['oncompleted',['OnCompleted',['../class_command_mgr.html#ade2efd944c6a552cbf28fb2979d6a89a',1,'CommandMgr']]],
-  ['openblock',['OpenBlock',['../class_command_mgr.html#acfed27d80d3f9650343cc9b7db2020c9',1,'CommandMgr']]]
+  ['n',['N',['../class_command_mgr.html#a777dcc8c99af7d8a7084857fa1ff4a0b',1,'CommandMgr']]]
 ];

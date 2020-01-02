@@ -114,11 +114,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4dc8e0869302d39b38802d40177ffdea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade2efd944c6a552cbf28fb2979d6a89a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_mgr.html#ade2efd944c6a552cbf28fb2979d6a89a">OnCompleted</a> ()</td></tr>
 <tr class="separator:ade2efd944c6a552cbf28fb2979d6a89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6982154b188980737919c3fea0f14654"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_mgr.html#a6982154b188980737919c3fea0f14654">AddHandler</a> (<a class="el" href="class_command_handler.html">CommandHandler</a> *handler)</td></tr>
+<tr class="separator:a6982154b188980737919c3fea0f14654"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a3156406dbe87133641f7e3485d0d8a83"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_command_base.html">CommandBase</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_mgr.html#a3156406dbe87133641f7e3485d0d8a83">m_cmdList</a></td></tr>
 <tr class="separator:a3156406dbe87133641f7e3485d0d8a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a886bbbdd90f79d44eb0031b039a6b1ec"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_command_handler.html">CommandHandler</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_mgr.html#a886bbbdd90f79d44eb0031b039a6b1ec">m_handlers</a></td></tr>
+<tr class="separator:a886bbbdd90f79d44eb0031b039a6b1ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a777dcc8c99af7d8a7084857fa1ff4a0b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_mgr.html#a777dcc8c99af7d8a7084857fa1ff4a0b">N</a></td></tr>
 <tr class="separator:a777dcc8c99af7d8a7084857fa1ff4a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e4ebf21ab0a7323c9ad831aec2b6b2d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_mgr.html#a0e4ebf21ab0a7323c9ad831aec2b6b2d">counter</a> = 0</td></tr>
@@ -164,6 +168,30 @@ Public Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_command_base.html">CommandBase</a> *&#160;</td>
           <td class="paramname"><em>cmd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6982154b188980737919c3fea0f14654"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CommandMgr::AddHandler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_command_handler.html">CommandHandler</a> *&#160;</td>
+          <td class="paramname"><em>handler</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -264,6 +292,18 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;<a class="el" href="class_command_base.html">CommandBase</a>*&gt; CommandMgr::m_cmdList</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a886bbbdd90f79d44eb0031b039a6b1ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_command_handler.html">CommandHandler</a>*&gt; CommandMgr::m_handlers</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -1,4 +1,6 @@
 <map id="Commands.h" name="Commands.h">
-<area shape="rect" id="node2" href="$bulk_8cpp.html" title="bulk.cpp" alt="" coords="5,80,80,107"/>
-<area shape="rect" id="node3" href="$_commands_8cpp.html" title="Commands.cpp" alt="" coords="104,80,227,107"/>
+<area shape="rect" id="node2" href="$bulk_8cpp.html" title="bulk.cpp" alt="" coords="5,229,80,256"/>
+<area shape="rect" id="node3" href="$_command_handler_8h.html" title="CommandHandler.h" alt="" coords="42,80,193,107"/>
+<area shape="rect" id="node5" href="$_commands_8cpp.html" title="Commands.cpp" alt="" coords="143,229,265,256"/>
+<area shape="rect" id="node4" href="$_command_mgr_8h.html" title="CommandMgr.h" alt="" coords="81,155,205,181"/>
 </map>
