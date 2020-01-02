@@ -1,4 +1,5 @@
 <map id="CommandMgr.h" name="CommandMgr.h">
-<area shape="rect" id="node2" href="$_command_handler_8h.html" title="CommandHandler.h" alt="" coords="30,80,181,107"/>
-<area shape="rect" id="node6" href="$_commands_8h.html" title="Commands.h" alt="" coords="217,155,325,181"/>
+<area shape="rect" id="node2" href="$_command_handler_8h.html" title="CommandHandler.h" alt="" coords="81,80,231,107"/>
+<area shape="rect" id="node6" href="$_command_package_8h.html" title="CommandPackage.h" alt="" coords="343,155,497,181"/>
+<area shape="rect" id="node9" href="$_command_8h.html" title="Command.h" alt="" coords="217,155,319,181"/>
 </map>
