@@ -19,30 +19,23 @@ int main(int argc, char const* argv[])
     CommandMgr mgr(N);
     mgr.AddHandler(new ConsoleCommandHandler());
     mgr.AddHandler(new FileCommandHandler());
-    StringCommandHandler* strHandler = new StringCommandHandler();
-    mgr.AddHandler(strHandler);
 
-    std::string str;
-    while (std::getline(std::cin, str))
+    std::string line;
+    while (std::getline(std::cin, line))
     {
-        CommandBase* cmd = nullptr;
-
-        if (str[0] == '{')
+        if (line == "{")
         {
             mgr.OpenBlock();
         }
-        else if (str[0] == '}')
+        else if (line == "}")
         {
             mgr.CloseBlock();
         }
         else
         {
-            cmd = new Command(str);
-            mgr.Add(cmd);
+            mgr.Add(new Command(line));
         }
     }
-
-    std::cout << "str: " << strHandler->str() << std::endl;
 
     return 0;
 }
