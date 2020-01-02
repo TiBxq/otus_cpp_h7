@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <ctime>
 
 class CommandMgr;
 
@@ -30,13 +31,17 @@ private:
 class CommandPackage
 {
 public:
-    CommandPackage(CommandMgr* mgr) : m_mgr(mgr)
+    CommandPackage(CommandMgr* mgr) : m_mgr(mgr), m_time(0)
     {}
 
     virtual ~CommandPackage() = default;
 
     virtual void Add(CommandBase* cmd)
     {
+        if (m_commands.empty())
+        {
+            m_time = std::time(0);
+        }
         m_commands.emplace_back(cmd);
     }
 
@@ -50,6 +55,7 @@ public:
     virtual Type GetType() = 0;
 
     std::vector<CommandBase*> m_commands;
+    std::time_t m_time;
     CommandMgr* m_mgr;
 };
 

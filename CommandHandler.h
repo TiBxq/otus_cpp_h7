@@ -35,7 +35,7 @@ class FileCommandHandler : public CommandHandler
 public:
     void Handle(CommandPackage* pkg) override
     {
-        std::ofstream of("file.txt");
+        std::ofstream of("bulk" + std::to_string(pkg->m_time) + ".log");
         of << "bulk: ";
         for (auto it = pkg->m_commands.begin(); it != pkg->m_commands.end(); ++it)
         {
