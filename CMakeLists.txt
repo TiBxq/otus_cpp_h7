@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.2)
 
-project(bulk VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
-#project(bulk VERSION 0.0.1)
+#project(bulk VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
+project(bulk VERSION 0.0.1)
 
 find_package(GTest REQUIRED)
 find_package(Threads REQUIRED)
 
-add_executable(bulk bulk.cpp Commands.h Commands.cpp CommandMgr.h CommandMgr.cpp CommandHandler.h)
+add_executable(bulk bulk.cpp Command.h CommandPackage.h CommandPackage.cpp CommandMgr.h CommandHandler.h)
 add_executable(bulk_test bulk_test.cpp)
 
 set_target_properties(bulk_test PROPERTIES
