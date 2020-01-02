@@ -7,21 +7,7 @@
 
 #include "Commands.h"
 #include "CommandMgr.h"
-
-class CommandHandler
-{
-
-};
-
-class ConsoleCommandHandler : CommandHandler
-{
-
-};
-
-class FileCommandHandler : CommandHandler
-{
-
-};
+#include "CommandHandler.h"
 
 int main(int argc, char const* argv[])
 {
@@ -32,6 +18,10 @@ int main(int argc, char const* argv[])
     }
 
     CommandMgr mgr(N);
+    mgr.AddHandler(new ConsoleCommandHandler());
+    mgr.AddHandler(new FileCommandHandler());
+    StringCommandHandler* strHandler = new StringCommandHandler();
+    mgr.AddHandler(strHandler);
 
     std::string str;
     while (std::getline(std::cin, str))
@@ -52,6 +42,8 @@ int main(int argc, char const* argv[])
             mgr.Add(cmd);
         }
     }
+
+    std::cout << "str: " << strHandler->str() << std::endl;
 
     return 0;
 }
