@@ -4,7 +4,8 @@
 #include <fstream>
 #include <sstream>
 
-#include "Commands.h"
+#include "CommandPackage.h"
+#include "Command.h"
 
 class CommandHandler
 {

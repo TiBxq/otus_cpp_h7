@@ -1,37 +1,15 @@
 #pragma once
 
-#include <iostream>
-#include <string>
 #include <vector>
 #include <ctime>
 
 class CommandMgr;
-
-class CommandBase
-{
-public:
-    virtual void Execute(std::ostream& os) = 0;
-};
-
-class Command : public CommandBase
-{
-public:
-    Command(std::string cmd) : m_cmd(cmd)
-    {}
-
-    virtual void Execute(std::ostream& os) override
-    {
-        os << m_cmd;
-    }
-
-private:
-    std::string m_cmd;
-};
+class CommandBase;
 
 class CommandPackage
 {
 public:
-    CommandPackage(CommandMgr* mgr) : m_mgr(mgr), m_time(0)
+    CommandPackage(CommandMgr* mgr) : m_time(0), m_mgr(mgr)
     {}
 
     virtual ~CommandPackage() = default;

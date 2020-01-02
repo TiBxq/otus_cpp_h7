@@ -52,8 +52,6 @@ public:
     { 
         if (m_pkg)
         {
-            std::cout << "Completed" << std::endl;
-
             for (CommandHandler* handler : m_handlers)
             {
                 handler->Handle(m_pkg);

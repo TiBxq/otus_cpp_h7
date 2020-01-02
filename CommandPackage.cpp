@@ -1,5 +1,4 @@
-#include "Commands.h"
-
+#include "CommandPackage.h"
 #include "CommandMgr.h"
 
 void StaticCommandPackage::Add(CommandBase* cmd)
