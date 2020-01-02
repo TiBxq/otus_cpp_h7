@@ -6,7 +6,7 @@ project(bulk VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 find_package(GTest REQUIRED)
 find_package(Threads REQUIRED)
 
-add_executable(bulk bulk.cpp)
+add_executable(bulk bulk.cpp Commands.h Commands.cpp CommandMgr.h CommandMgr.cpp)
 add_executable(bulk_test bulk_test.cpp)
 
 set_target_properties(bulk_test PROPERTIES
