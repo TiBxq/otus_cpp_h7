@@ -105,8 +105,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4dc8e0869302d39b38802d40177ffdea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade2efd944c6a552cbf28fb2979d6a89a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_mgr.html#ade2efd944c6a552cbf28fb2979d6a89a">OnCompleted</a> ()</td></tr>
 <tr class="separator:ade2efd944c6a552cbf28fb2979d6a89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6982154b188980737919c3fea0f14654"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_mgr.html#a6982154b188980737919c3fea0f14654">AddHandler</a> (<a class="el" href="class_command_handler.html">CommandHandler</a> *handler)</td></tr>
-<tr class="separator:a6982154b188980737919c3fea0f14654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a098c38f960b3e9fbbb26017c10444de7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_mgr.html#a098c38f960b3e9fbbb26017c10444de7">AddHandler</a> (std::unique_ptr&lt; <a class="el" href="class_command_handler.html">CommandHandler</a> &gt; &amp;&amp;handler)</td></tr>
+<tr class="separator:a098c38f960b3e9fbbb26017c10444de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0d3968316177972d096d752e8607b68b"></a>
@@ -158,7 +158,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6982154b188980737919c3fea0f14654"></a>
+<a class="anchor" id="a098c38f960b3e9fbbb26017c10444de7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -168,7 +168,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void CommandMgr::AddHandler </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_command_handler.html">CommandHandler</a> *&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_command_handler.html">CommandHandler</a> &gt; &amp;&amp;&#160;</td>
           <td class="paramname"><em>handler</em></td><td>)</td>
           <td></td>
         </tr>
