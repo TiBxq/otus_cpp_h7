@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['test',['TEST',['../bulk__test_8cpp.html#a3e90390b00eeff928b2264aee8436947',1,'TEST(bulk, bulk_test1):&#160;bulk_test.cpp'],['../bulk__test_8cpp.html#ac1ecf32e25a25098145b81df670a2a25',1,'TEST(bulk, bulk_test2):&#160;bulk_test.cpp'],['../bulk__test_8cpp.html#a3a866a0c868ee484c7a7efb2d2dc3b25',1,'TEST(bulk, bulk_test3):&#160;bulk_test.cpp']]],
-  ['type',['Type',['../class_command_package.html#acf0736b6fc6ddd41a4d281941f53b4af',1,'CommandPackage']]]
+  ['_7ecommandbase',['~CommandBase',['../class_command_base.html#a98c018c0c438c25ed5204f60b30e5f9c',1,'CommandBase']]],
+  ['_7ecommandhandler',['~CommandHandler',['../class_command_handler.html#ac9af4591b2535539aaaaca23a6c43944',1,'CommandHandler']]],
+  ['_7ecommandpackage',['~CommandPackage',['../class_command_package.html#aff9278d87e945691853755f0b90c7d51',1,'CommandPackage']]]
 ];
