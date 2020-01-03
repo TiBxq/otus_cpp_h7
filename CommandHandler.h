@@ -11,13 +11,13 @@ class CommandHandler
 {
 public:
     virtual ~CommandHandler() = default;
-    virtual void Handle(CommandPackage* pkg) = 0;
+    virtual void Handle(const CommandPackage* pkg) = 0;
 };
 
 class ConsoleCommandHandler : public CommandHandler
 {
 public:
-    void Handle(CommandPackage* pkg) override
+    void Handle(const CommandPackage* pkg) override
     {
         std::cout << "bulk: ";
         for (auto it = pkg->GetCommands().begin(); it != pkg->GetCommands().end(); ++it)
@@ -35,7 +35,7 @@ public:
 class FileCommandHandler : public CommandHandler
 {
 public:
-    void Handle(CommandPackage* pkg) override
+    void Handle(const CommandPackage* pkg) override
     {
         std::ofstream of("bulk" + std::to_string(pkg->GetTime()) + ".log");
         of << "bulk: ";
@@ -55,7 +55,7 @@ public:
 class StringCommandHandler : public CommandHandler
 {
 public:
-    void Handle(CommandPackage* pkg) override
+    void Handle(const CommandPackage* pkg) override
     {
         m_stringstream.clear();
 
