@@ -6,6 +6,7 @@
 class CommandBase
 {
 public:
+    virtual ~CommandBase() = default;
     virtual void Execute(std::ostream& os) = 0;
 };
 

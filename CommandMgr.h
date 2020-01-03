@@ -5,14 +5,14 @@
 class CommandMgr
 {
 public:
-    CommandMgr(int n) : N(n)
+    CommandMgr(int n) : m_staticPackageSize(n), m_pkg(nullptr)
     {}
 
     void Add(CommandBase* cmd)
     {
         if (!m_pkg)
         {
-            m_pkg = new StaticCommandPackage(this, N);
+            m_pkg = new StaticCommandPackage(this, m_staticPackageSize);
         }
         m_pkg->Add(cmd);
     }
@@ -69,11 +69,10 @@ public:
 
     //dtor
 
-//private:
+private:
     std::vector<CommandBase*> m_cmdList;
     std::vector<CommandHandler*> m_handlers;
-    int N;
-    int counter = 0;
+    int m_staticPackageSize;
 
-    CommandPackage* m_pkg = nullptr;
+    CommandPackage* m_pkg;
 };

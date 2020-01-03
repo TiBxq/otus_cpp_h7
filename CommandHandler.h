@@ -10,6 +10,7 @@
 class CommandHandler
 {
 public:
+    virtual ~CommandHandler() = default;
     virtual void Handle(CommandPackage* pkg) = 0;
 };
 
