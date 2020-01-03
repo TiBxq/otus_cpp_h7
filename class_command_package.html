@@ -86,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_command_package-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CommandPackage Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -129,9 +129,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adf316952ad3d49535765e76a0eaf0f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93fc18bbc9aa1c30516772ca13039a47"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_command_package.html#acf0736b6fc6ddd41a4d281941f53b4af">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_package.html#a93fc18bbc9aa1c30516772ca13039a47">GetType</a> ()=0</td></tr>
 <tr class="separator:a93fc18bbc9aa1c30516772ca13039a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addb135a3d7c1178a58abdcec50574c54"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_command_base.html">CommandBase</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_package.html#addb135a3d7c1178a58abdcec50574c54">GetCommands</a> () const </td></tr>
+<tr class="separator:addb135a3d7c1178a58abdcec50574c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a745a38a1c826189a14361c09d542eaed"><td class="memItemLeft" align="right" valign="top">std::time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_package.html#a745a38a1c826189a14361c09d542eaed">GetTime</a> () const </td></tr>
+<tr class="separator:a745a38a1c826189a14361c09d542eaed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
 <tr class="memitem:a7d9df387eb18a412a9f89ba02b81ce5f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_command_base.html">CommandBase</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_package.html#a7d9df387eb18a412a9f89ba02b81ce5f">m_commands</a></td></tr>
 <tr class="separator:a7d9df387eb18a412a9f89ba02b81ce5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac69af40d64964231f1f63feba021b54a"><td class="memItemLeft" align="right" valign="top">std::time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_package.html#ac69af40d64964231f1f63feba021b54a">m_time</a></td></tr>
@@ -241,6 +245,52 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="addb135a3d7c1178a58abdcec50574c54"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;std::unique_ptr&lt;<a class="el" href="class_command_base.html">CommandBase</a>&gt; &gt;&amp; CommandPackage::GetCommands </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a745a38a1c826189a14361c09d542eaed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::time_t CommandPackage::GetTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a93fc18bbc9aa1c30516772ca13039a47"></a>
 <div class="memitem">
 <div class="memproto">
@@ -270,11 +320,19 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a7d9df387eb18a412a9f89ba02b81ce5f"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;std::unique_ptr&lt;<a class="el" href="class_command_base.html">CommandBase</a>&gt; &gt; CommandPackage::m_commands</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -282,11 +340,19 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="a7b19fb740d52ef121680c04c5ef12e0c"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_command_mgr.html">CommandMgr</a>* CommandPackage::m_mgr</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -294,11 +360,19 @@ Public Attributes</h2></td></tr>
 <a class="anchor" id="ac69af40d64964231f1f63feba021b54a"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::time_t CommandPackage::m_time</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
