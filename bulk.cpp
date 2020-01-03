@@ -33,7 +33,7 @@ int main(int argc, char const* argv[])
         }
         else
         {
-            mgr.Add(new Command(line));
+            mgr.Add(new Command(std::move(line)));
         }
     }
 

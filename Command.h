@@ -13,7 +13,7 @@ public:
 class Command : public CommandBase
 {
 public:
-    Command(std::string cmd) : m_cmd(cmd)
+    Command(std::string&& cmd) : m_cmd(std::move(cmd))
     {}
 
     virtual void Execute(std::ostream& os) override
