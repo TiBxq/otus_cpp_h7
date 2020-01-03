@@ -50,6 +50,18 @@ public:
         }
     }
 
+    void OnEOF()
+    {
+        if (m_pkg)
+        {
+            if (m_pkg->GetType() == CommandPackage::Type::Static)
+            {
+                OnCompleted();
+            }
+        }
+        m_pkg = nullptr;
+    }
+
     void OnCompleted()
     { 
         if (m_pkg)
