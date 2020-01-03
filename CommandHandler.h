@@ -20,10 +20,10 @@ public:
     void Handle(CommandPackage* pkg) override
     {
         std::cout << "bulk: ";
-        for (auto it = pkg->m_commands.begin(); it != pkg->m_commands.end(); ++it)
+        for (auto it = pkg->GetCommands().begin(); it != pkg->GetCommands().end(); ++it)
         {
             (*it)->Execute(std::cout);
-            if (std::distance(it, pkg->m_commands.end()) != 1)
+            if (std::distance(it, pkg->GetCommands().end()) != 1)
             {
                 std::cout << ", ";
             }
@@ -37,12 +37,12 @@ class FileCommandHandler : public CommandHandler
 public:
     void Handle(CommandPackage* pkg) override
     {
-        std::ofstream of("bulk" + std::to_string(pkg->m_time) + ".log");
+        std::ofstream of("bulk" + std::to_string(pkg->GetTime()) + ".log");
         of << "bulk: ";
-        for (auto it = pkg->m_commands.begin(); it != pkg->m_commands.end(); ++it)
+        for (auto it = pkg->GetCommands().begin(); it != pkg->GetCommands().end(); ++it)
         {
             (*it)->Execute(of);
-            if (std::distance(it, pkg->m_commands.end()) != 1)
+            if (std::distance(it, pkg->GetCommands().end()) != 1)
             {
                 of << ", ";
             }
@@ -60,10 +60,10 @@ public:
         m_stringstream.clear();
 
         m_stringstream << "bulk: ";
-        for (auto it = pkg->m_commands.begin(); it != pkg->m_commands.end(); ++it)
+        for (auto it = pkg->GetCommands().begin(); it != pkg->GetCommands().end(); ++it)
         {
             (*it)->Execute(m_stringstream);
-            if (std::distance(it, pkg->m_commands.end()) != 1)
+            if (std::distance(it, pkg->GetCommands().end()) != 1)
             {
                 m_stringstream << ", ";
             }

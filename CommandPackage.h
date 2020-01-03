@@ -31,7 +31,10 @@ public:
     };
     virtual Type GetType() = 0;
 
-//protected:
+    const std::vector<std::unique_ptr<CommandBase>>& GetCommands() const { return m_commands; }
+    std::time_t GetTime() const { return m_time; }
+
+protected:
     std::vector<std::unique_ptr<CommandBase>> m_commands;
     std::time_t m_time;
     CommandMgr* m_mgr;
