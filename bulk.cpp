@@ -37,5 +37,7 @@ int main(int argc, char const* argv[])
         }
     }
 
+    mgr.OnCompleted();
+
     return 0;
 }

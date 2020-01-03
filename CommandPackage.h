@@ -63,7 +63,7 @@ public:
     void IncCounter() { ++m_packCounter; }
     void DecCounter();
 
-    Type GetType() { return Type::Dynamic; }
+    Type GetType() override { return Type::Dynamic; }
 
 private:
     std::size_t m_packCounter = 1;
