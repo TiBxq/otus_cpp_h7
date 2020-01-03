@@ -114,8 +114,8 @@ Collaboration diagram for StaticCommandPackage:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4bc5877a72e3b99f5595b7c2c63ed614"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_command_package.html#a4bc5877a72e3b99f5595b7c2c63ed614">StaticCommandPackage</a> (<a class="el" href="class_command_mgr.html">CommandMgr</a> *mgr, std::size_t size)</td></tr>
 <tr class="separator:a4bc5877a72e3b99f5595b7c2c63ed614"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2717dcf354843f9baf8db6068e5e846b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_command_package.html#a2717dcf354843f9baf8db6068e5e846b">Add</a> (<a class="el" href="class_command_base.html">CommandBase</a> *cmd) override</td></tr>
-<tr class="separator:a2717dcf354843f9baf8db6068e5e846b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b9b05b8e077f48b4e52bd7b7d11d559"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_command_package.html#a9b9b05b8e077f48b4e52bd7b7d11d559">Add</a> (std::unique_ptr&lt; <a class="el" href="class_command_base.html">CommandBase</a> &gt; &amp;&amp;cmd) override</td></tr>
+<tr class="separator:a9b9b05b8e077f48b4e52bd7b7d11d559"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addf43efa85be145485067e165ca4e9a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_command_package.html#acf0736b6fc6ddd41a4d281941f53b4af">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_command_package.html#addf43efa85be145485067e165ca4e9a5">GetType</a> () override</td></tr>
 <tr class="separator:addf43efa85be145485067e165ca4e9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_command_package"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_command_package')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_command_package.html">CommandPackage</a></td></tr>
@@ -123,8 +123,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a872ec95a2dfbbbd89b714c7f9b169b3b inherit pub_methods_class_command_package"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff9278d87e945691853755f0b90c7d51 inherit pub_methods_class_command_package"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_package.html#aff9278d87e945691853755f0b90c7d51">~CommandPackage</a> ()=default</td></tr>
 <tr class="separator:aff9278d87e945691853755f0b90c7d51 inherit pub_methods_class_command_package"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3432acc59038e7f41d9fcab09d3d6ac2 inherit pub_methods_class_command_package"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_package.html#a3432acc59038e7f41d9fcab09d3d6ac2">Execute</a> ()</td></tr>
-<tr class="separator:a3432acc59038e7f41d9fcab09d3d6ac2 inherit pub_methods_class_command_package"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -134,8 +132,8 @@ Additional Inherited Members</h2></td></tr>
  }</td></tr>
 <tr class="separator:acf0736b6fc6ddd41a4d281941f53b4af inherit pub_types_class_command_package"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_command_package"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_command_package')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_command_package.html">CommandPackage</a></td></tr>
-<tr class="memitem:a301686bf8e00e9dacb51aa376ad5692f inherit pub_attribs_class_command_package"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_command_base.html">CommandBase</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_package.html#a301686bf8e00e9dacb51aa376ad5692f">m_commands</a></td></tr>
-<tr class="separator:a301686bf8e00e9dacb51aa376ad5692f inherit pub_attribs_class_command_package"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d9df387eb18a412a9f89ba02b81ce5f inherit pub_attribs_class_command_package"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_command_base.html">CommandBase</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_package.html#a7d9df387eb18a412a9f89ba02b81ce5f">m_commands</a></td></tr>
+<tr class="separator:a7d9df387eb18a412a9f89ba02b81ce5f inherit pub_attribs_class_command_package"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac69af40d64964231f1f63feba021b54a inherit pub_attribs_class_command_package"><td class="memItemLeft" align="right" valign="top">std::time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_package.html#ac69af40d64964231f1f63feba021b54a">m_time</a></td></tr>
 <tr class="separator:ac69af40d64964231f1f63feba021b54a inherit pub_attribs_class_command_package"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b19fb740d52ef121680c04c5ef12e0c inherit pub_attribs_class_command_package"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_command_mgr.html">CommandMgr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command_package.html#a7b19fb740d52ef121680c04c5ef12e0c">m_mgr</a></td></tr>
@@ -177,7 +175,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a2717dcf354843f9baf8db6068e5e846b"></a>
+<a class="anchor" id="a9b9b05b8e077f48b4e52bd7b7d11d559"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -187,7 +185,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void StaticCommandPackage::Add </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_command_base.html">CommandBase</a> *&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_command_base.html">CommandBase</a> &gt; &amp;&amp;&#160;</td>
           <td class="paramname"><em>cmd</em></td><td>)</td>
           <td></td>
         </tr>
@@ -199,7 +197,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="class_command_package.html#ad58f755e0343cdbaf34a72473a131f0f">CommandPackage</a>.</p>
+<p>Reimplemented from <a class="el" href="class_command_package.html#adf316952ad3d49535765e76a0eaf0f47">CommandPackage</a>.</p>
 
 </div>
 </div>
