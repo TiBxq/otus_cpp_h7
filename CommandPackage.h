@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <ctime>
+#include <memory>
 
 class CommandMgr;
 class CommandBase;
@@ -14,16 +15,14 @@ public:
 
     virtual ~CommandPackage() = default;
 
-    virtual void Add(CommandBase* cmd)
+    virtual void Add(std::unique_ptr<CommandBase>&& cmd)
     {
         if (m_commands.empty())
         {
             m_time = std::time(0);
         }
-        m_commands.emplace_back(cmd);
+        m_commands.emplace_back(std::move(cmd));
     }
-
-    virtual void Execute() {}
 
     enum class Type
     {
@@ -32,7 +31,8 @@ public:
     };
     virtual Type GetType() = 0;
 
-    std::vector<CommandBase*> m_commands;
+//protected:
+    std::vector<std::unique_ptr<CommandBase>> m_commands;
     std::time_t m_time;
     CommandMgr* m_mgr;
 };
@@ -43,7 +43,7 @@ public:
     StaticCommandPackage(CommandMgr* mgr, std::size_t size) : CommandPackage(mgr), m_size(size)
     {}
 
-    void Add(CommandBase* cmd) override;
+    void Add(std::unique_ptr<CommandBase>&& cmd) override;
 
     Type GetType() override { return Type::Static; }
 

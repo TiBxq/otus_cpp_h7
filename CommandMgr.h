@@ -10,13 +10,13 @@ public:
     CommandMgr(int n) : m_staticPackageSize(n), m_pkg(nullptr)
     {}
 
-    void Add(CommandBase* cmd)
+    void Add(std::unique_ptr<CommandBase>&& cmd)
     {
         if (!m_pkg)
         {
             m_pkg = new StaticCommandPackage(this, m_staticPackageSize);
         }
-        m_pkg->Add(cmd);
+        m_pkg->Add(std::move(cmd));
     }
 
     void OpenBlock()
@@ -72,7 +72,6 @@ public:
     //dtor
 
 private:
-    std::vector<CommandBase*> m_cmdList;
     std::vector<std::unique_ptr<CommandHandler>> m_handlers;
     int m_staticPackageSize;
 
