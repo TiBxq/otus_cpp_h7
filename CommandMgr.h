@@ -1,5 +1,7 @@
 #pragma once
 
+#include <memory>
+
 #include "CommandHandler.h"
 
 class CommandMgr
@@ -52,7 +54,7 @@ public:
     { 
         if (m_pkg)
         {
-            for (CommandHandler* handler : m_handlers)
+            for (auto& handler : m_handlers)
             {
                 handler->Handle(m_pkg);
             }
@@ -62,16 +64,16 @@ public:
         }
     }
 
-    void AddHandler(CommandHandler* handler)
+    void AddHandler(std::unique_ptr<CommandHandler>&& handler)
     {
-        m_handlers.emplace_back(handler);
+        m_handlers.emplace_back(std::move(handler));
     }
 
     //dtor
 
 private:
     std::vector<CommandBase*> m_cmdList;
-    std::vector<CommandHandler*> m_handlers;
+    std::vector<std::unique_ptr<CommandHandler>> m_handlers;
     int m_staticPackageSize;
 
     CommandPackage* m_pkg;

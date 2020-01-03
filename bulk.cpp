@@ -17,8 +17,8 @@ int main(int argc, char const* argv[])
     }
 
     CommandMgr mgr(N);
-    mgr.AddHandler(new ConsoleCommandHandler());
-    mgr.AddHandler(new FileCommandHandler());
+    mgr.AddHandler(std::make_unique<ConsoleCommandHandler>());
+    mgr.AddHandler(std::make_unique<FileCommandHandler>());
 
     std::string line;
     while (std::getline(std::cin, line))

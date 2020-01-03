@@ -8,7 +8,7 @@ TEST(bulk, bulk_test1)
 {
     CommandMgr mgr(3);
     StringCommandHandler* strHandler = new StringCommandHandler();
-    mgr.AddHandler(strHandler);
+    mgr.AddHandler(std::unique_ptr<StringCommandHandler>(strHandler));
 
     mgr.Add(new Command("cmd1"));
     mgr.Add(new Command("cmd2"));
@@ -21,7 +21,7 @@ TEST(bulk, bulk_test2)
 {
     CommandMgr mgr(3);
     StringCommandHandler* strHandler = new StringCommandHandler();
-    mgr.AddHandler(strHandler);
+    mgr.AddHandler(std::unique_ptr<StringCommandHandler>(strHandler));
 
     mgr.OpenBlock();
     mgr.Add(new Command("cmd1"));
@@ -38,7 +38,7 @@ TEST(bulk, bulk_test3)
 {
     CommandMgr mgr(3);
     StringCommandHandler* strHandler = new StringCommandHandler();
-    mgr.AddHandler(strHandler);
+    mgr.AddHandler(std::unique_ptr<StringCommandHandler>(strHandler));
 
     mgr.OpenBlock();
     mgr.Add(new Command("cmd1"));
